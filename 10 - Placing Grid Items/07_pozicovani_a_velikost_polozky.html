@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <title>Placing Grid Items!</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item1"><p>1</p></div>
+        <div class="item item2"><p>2</p></div>
+        <div class="item item3"><p>3</p></div>
+        <div class="item item4"><p>4</p></div>
+        <div class="item item5"><p>5</p></div>
+        <div class="item item6"><p>6</p></div>
+        <div class="item item7"><p>7</p></div>
+        <div class="item item8"><p>8</p></div>
+        <div class="item poop">💩</div>
+        <div class="item item9"><p>9</p></div>
+        <div class="item item10"><p>10</p></div>
+        <div class="item item11"><p>11</p></div>
+        <div class="item item12"><p>12</p></div>
+        <div class="item item13"><p>13</p></div>
+        <div class="item item14"><p>14</p></div>
+        <div class="item item15"><p>15</p></div>
+        <div class="item item16"><p>16</p></div>
+        <div class="item item17"><p>17</p></div>
+        <div class="item item18"><p>18</p></div>
+        <div class="item item19"><p>19</p></div>
+        <div class="item item20"><p>20</p></div>
+        <div class="item item21"><p>21</p></div>
+        <div class="item item22"><p>22</p></div>
+        <div class="item item23"><p>23</p></div>
+        <div class="item item24"><p>24</p></div>
+        <div class="item item25"><p>25</p></div>
+        <div class="item item26"><p>26</p></div>
+        <div class="item item27"><p>27</p></div>
+        <div class="item item28"><p>28</p></div>
+        <div class="item item29"><p>29</p></div>
+        <div class="item item30"><p>30</p></div>
+    </div>
+
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+        }
+
+        .poop {
+            background: #BADA55;
+            grid-column-start: 2;
+            grid-column-end: 5;
+            /* Zkrácený zápis */
+            /* grid-column: 2 / 5; */
+            /* Zkrácený zápis s použitím span */
+            /* grid-column: 2 / span 3; */ 
+            /* Zkrácený zápis s použitím span */
+            /* grid-column: span 3 / 5; */ 
+            /* Zkrácený zápis s použitím -1 pro označení konce */
+            /* grid-column: 1 / -1; */ 
+            /* Zkrácený zápis s použitím -2 pro označení předposledního sloupce */
+            /* grid-column: 1 / -2; */
+            /* Zkrácený zápis pro řádky */
+            /* grid-row: 2 / 5; */ 
+        }
+    </style>
+</body>
+
+</html>
