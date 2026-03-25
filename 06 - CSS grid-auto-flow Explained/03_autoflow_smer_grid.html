@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../assets/style.css">
+	<title>CSS grid-auto-flow </title>
+</head>
+
+<body>
+	<div class="container">
+	<div class="item"><p>1</p></div>
+	<div class="item"><p>2</p></div>
+	<div class="item"><p>3</p></div>
+	<div class="item"><p>4</p></div>
+	<div class="item"><p>5</p></div>
+	<div class="item"><p>6</p></div>
+	<div class="item"><p>7</p></div>
+	<div class="item"><p>8</p></div>
+	<div class="item"><p>9</p></div>
+	<div class="item"><p>10</p></div>
+	<div class="item"><p>11</p></div>
+	<div class="item"><p>12</p></div>
+</div>
+
+<style>
+
+.container {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 400px 200px;
+
+	/* Vlastnost grid-auto-flow nám umožňuje určit směr, kterým se položky v gridu automaticky umisťují, když nejsou explicitně umístěny pomocí grid-row a grid-column. Výchozí hodnota pro grid-auto-flow je row, což znamená, že položky se umisťují řádek po řádku. Pokud však nastavíme grid-auto-flow na column, položky se budou umisťovat sloupec po sloupci. To znamená, že první položka bude umístěna v prvním sloupci a první řádce, druhá položka bude umístěna ve druhém sloupci a první řádce, třetí položka bude umístěna v prvním sloupci a druhé řádce, a tak dále. Pokud tedy máme více položek než počet explicitně definovaných řádků nebo sloupců, grid-auto-flow nám umožňuje určit, jakým způsobem budou tyto položky umístěny do implicitních řádků nebo sloupců. */
+
+	/* grid-auto-flow: column;
+	grid-auto-columns: 200px; */
+}
+</style>
+</body>
+
+</html>
