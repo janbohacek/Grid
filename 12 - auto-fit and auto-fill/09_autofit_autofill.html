@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../assets/style.css">
+	<title>auto-fit a auto-fill!</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="item item1"><p>Item 01</p></div>
+		<div class="item item2"><p>Item 02</p></div>
+		<div class="item item3"><p>Item 03</p></div>
+		<div class="item item4"><p>Item 04</p></div>
+		<!-- <div class="item item5"><p>Item 05</p></div>
+		<div class="item item6"><p>Item 06</p></div>
+		<div class="item item7"><p>Item 07</p></div>
+		<div class="item item8"><p>Item 08</p></div>
+		<div class="item item9"><p>Item 09</p></div>
+		<div class="item item10"><p>Item 10</p></div>
+		<div class="item item11"><p>Item 11</p></div>
+		<div class="item item12"><p>Item 12</p></div>
+		<div class="item item13"><p>Item 13</p></div>
+		<div class="item item14"><p>Item 14</p></div>
+		<div class="item item15"><p>Item 15</p></div>
+		<div class="item item16"><p>Item 16</p></div>
+		<div class="item item17"><p>Item 17</p></div>
+		<div class="item item18"><p>Item 18</p></div> -->
+
+
+		<!-- Zapněte si GRID v Devtools -->
+	</div>
+
+	<style>
+		.container {
+			display: grid;
+			grid-gap: 20px;
+			border: 10px solid var(--yellow);
+			/* grid-template-columns: repeat(auto-fit, 150px); */
+
+			/* Auto-fill vytvoří tolik sloupců, kolik se jich vejde, i když nejsou všechny obsazené. Auto-fit se chová stejně jako auto-fill, ale pokud jsou nějaké sloupce prázdné, zruší je a roztáhne ostatní sloupce na celou šířku mřížky. */
+			grid-template-columns: repeat(auto-fill, 150px);
+
+			/* Mnohem lepé pochopitelné to bude, až se bude používat minmax funkce, ale prozatím se zaměřme na rozdíl mezi auto-fit a auto-fill. */
+
+		}
+
+		/* .item4 {
+			grid-column-end: -1;
+		} */
+	</style>
+</body>
+
+</html>

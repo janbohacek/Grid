@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../assets/style.css">
+	<title>Používání minmax() funkce pro responzivní mřížky</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="item item1"><p>Item 01</p></div>
+		<div class="item item2"><p>Bonjour!</p></div>
+		<div class="item item3"><p>Item 03</p></div>
+		<div class="item item4"><p>Item 04</p></div>
+	</div>
+
+	<style>
+		.container {
+			display: grid;
+			grid-gap: 20px;
+			border: 10px solid var(--yellow);
+			
+			grid-template-columns: repeat(auto-fill, 100px);
+			
+		
+			/* minmax udává minimální a maximální velikost sloupce. V tomto případě se sloupce budou roztahovat od 100px do 1fr, což znamená, že se budou roztahovat až do maximální možné šířky, ale nikdy nebudou menší než 100px. */
+			
+			/* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
+
+
+			/* V tomto případě se sloupce budou roztahovat od 150px do 1fr, což znamená, že se budou roztahovat až do maximální možné šířky, ale nikdy nebudou menší než 150px. Pokud je tedy k dispozici dostatek prostoru, budou sloupce roztahovat až do maximální šířky, ale pokud je prostor omezený, budou se zmenšovat až na minimální velikost 150px. */
+			
+			/* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+			
+			
+			
+			/* grid-template-columns: fit-content(100px) 150px 150px 150px; */
+ 
+		}
+	</style>
+</body>
+
+</html>
