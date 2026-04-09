@@ -25,18 +25,16 @@
 			grid-template-columns: repeat(auto-fill, 100px);
 			
 		
-			/* minmax udává minimální a maximální velikost sloupce. V tomto případě se sloupce budou roztahovat od 100px do 1fr, což znamená, že se budou roztahovat až do maximální možné šířky, ale nikdy nebudou menší než 100px. */
-			
-			/* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
+			/* minmax udává minimální a maximální velikost sloupce. V tomto případě se sloupce budou roztahovat od 100px do 1fr, což znamená, že se budou roztahovat až do maximální možné šířky, ale nikdy nebudou menší než 150px. */
+			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 
 
 			/* V tomto případě se sloupce budou roztahovat od 150px do 1fr, což znamená, že se budou roztahovat až do maximální možné šířky, ale nikdy nebudou menší než 150px. Pokud je tedy k dispozici dostatek prostoru, budou sloupce roztahovat až do maximální šířky, ale pokud je prostor omezený, budou se zmenšovat až na minimální velikost 150px. */
-			
-			/* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
-			
-			
-			
-			/* grid-template-columns: fit-content(100px) 150px 150px 150px; */
+			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+
+			/* V tomto případě se sloupce budou roztahovat od minimální velikosti, která je buď 300px nebo 100% dostupné šířky (podle toho, co je menší), až do maximální velikosti 1fr. To znamená, že sloupce se budou roztahovat až do maximální možné šířky, ale nikdy nebudou menší než minimální velikost, která je buď 300px nebo 100% dostupné šířky.*/
+			grid-template-columns: repeat(auto-fit, minmax(min(300px,100%),1fr));
  
 		}
 	</style>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <title>Grid Template Areas</title>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">
+            <p>Já jsem Sidebar s pořadovým číslem 1</p>
+        </div>
+        <div class="item item2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, sed.</p>
+            <p>Lorem ipsum d</p>
+        </div>
+        <div class="item item3">
+            <p>Já jsem Sidebar s pořadovým číslem 2</p>
+        </div>
+        <div class="item footer">
+            <p>Já jsem patka patičková</p>
+        </div>
+    </div>
+
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 20px;
+
+            /* pomoci rows a columns definujeme velikost jednotlivých řádků a sloupců. V tomto případě máme 3 sloupce a 3 řádky, kde první dva mají velikost 150px a třetí řádek má velikost 100px. */
+            grid-template-columns: 1fr 10fr 1fr;
+            grid-template-rows: 150px 150px 100px;
+        }
+
+        .footer {background-color: red;}
+        .item1 {background-color: green;}
+        .item2 {background-color: blue; color: white;}
+        .item3 {background-color: yellow;}
+
+        /* grid-template-areas:
+                "sidebar-1  content   sidebar-2"
+                "sidebar-1  content   sidebar-2"
+                "footer     footer    footer" 
+        */
+
+        /* .footer {
+            grid-area: footer;
+        }
+
+        .item1 {
+            grid-area: sidebar-1;
+        }
+
+        .item2 {
+            grid-area: content;
+        }
+
+        .item3 {
+            grid-area: sidebar-2;
+        } */
+
+        /* grid-template-areas:
+                "sidebar-1  content   sidebar-2"
+                "sidebar-1  content   sidebar-2"
+                "footer     footer    ." */
+
+        @media (max-width: 700px) {
+            .container {
+                grid-template-areas:
+                    "content    content     content"
+                    "sidebar-1  sidebar-1   sidebar-2"
+                    "footer     footer      footer"
+            }
+        }
+
+
+        @media (max-width: 400px) {
+            .container {
+                grid-template-rows: 100px 150px 150px;
+                grid-template-areas:
+                    "content    content     content"
+                    "sidebar-1  sidebar-1   sidebar-1"
+                    "sidebar-2  sidebar-2   sidebar-2"
+                    "footer     footer      footer"
+            }
+        }
+
+
+    </style>
+</body>
+
+</html>
